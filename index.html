@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBP Lazy Load Demo</title>
+    <style>
+        html{
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        .container{
+            width: 96%;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .scrollplaceholder{
+            background-color: #eee;
+            min-height: 100vh;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        .scrollplaceholder__inner{
+            padding: 1em;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        small{
+            display: block;
+            margin-bottom: 0.2em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="scrollplaceholder">
+            <div class="scrollplaceholder__inner">
+                <small>This large element is only here for pushing the image out of viewport, so IntersectionObserver has something to observe</small><br>
+                <strong>Scoll down</strong><br>
+                &darr;
+            </div>
+        </div>
+        <img src="" class="lazyjpegwebp" data-src="images/image.jpg" data-srcwebp="images/image.webp" alt="Testing image">
+        <!--
+            NOTE: As a no-js fallback, you should add a <noscript> tag with the image inside it.
+        -->
+    </div>
+</body>
+<script src="webplazyload.js"></script>
+</html>
