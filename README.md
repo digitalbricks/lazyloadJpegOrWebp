@@ -19,7 +19,7 @@ See demo in `index.html`.
 (The `src` attribute may be left empty if you want so)
 
 ## Notes
-This script will not generate the WEBP file for you – this is the task of your CMS / you / your code. This script only provides a way to lazy load a WEBP file if the browser supports while falling back to the "normale" image if not the case.
+This script will not generate the WEBP file for you – this is the task of your CMS / you / your code. This script only provides a way to lazy load a WEBP file if the browser supports while falling back to the "normal" image if not the case.
 
 In a real-life scenario you should also compare the filesize of the WEBP against the "normal" file and only populate the `data-srcwebp` attribute if WEBP is smaller than the other file. WEBP isn't the holy grail, so in some cases a JPEG is even smaller than a WEBP.
 
